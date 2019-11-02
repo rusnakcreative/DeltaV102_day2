@@ -92,9 +92,35 @@ function addsum() {
     console.log('The average of your numbers is ' +  sum / count)
 }
 
-addsum();
+//addsum();
 
+function forloop() {
+    for (var count=0; count <= 100; count+= 7) {
+        print(count);
+    }
+}
 
+forloop();
+
+function learnArrays() {
+    var months = ["January", "Februrary", "March", "April", "May", "June", "July", "August", "Septmeber", "October", "November", "December"];
+
+    // months[index] index always starts at 0
+//print(months[0]);
+
+// i stands for iteration
+    for (var i = 0; i < months.length; i++) {
+        print(months[i])
+    }
+
+    // array.forEach will iterate through each item in array
+    // inside the () will need to create an anonomous function with a variable inside the argument to iterate through the array.
+    months.forEach(function (month) {
+        print(month);
+    });
+}
+
+learnArrays();
 // This also makes a function
 // var day1AM = function() {
 //

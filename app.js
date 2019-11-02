@@ -100,7 +100,7 @@ function forloop() {
     }
 }
 
-forloop();
+//forloop();
 
 function learnArrays() {
     var months = ["January", "Februrary", "March", "April", "May", "June", "July", "August", "Septmeber", "October", "November", "December"];
@@ -120,7 +120,39 @@ function learnArrays() {
     });
 }
 
-learnArrays();
+//learnArrays();
+
+function day2PM() {
+    var mike = {
+        firstName: "Mike",
+        middleName: "Danger",
+        lastName: "Rusnak",
+        dob: [7,1,1985], //M, D, Y. This is added as an array so we can utlize this later.
+        likesPizza: true,
+        heightInInches: 73,
+        fullName: function () {
+            return this.firstName + ' ' + this.middleName + ' ' + this.lastName;
+        },
+        age: function () {
+            var today = new Date();
+            var year = today.getFullYear();
+            // getMonth will result in 0 for Jan.
+            var month = today.getMonth() + 1;
+            var day = today.getDate();
+            var myAge = year - this.dob[2];
+            if(month < this.dob[0] || month === this.dob[0] && day < this.dob[1]) {
+                myAge--;
+            }
+        return(myAge);
+        },
+    };
+    print(mike.dob)
+    print(mike.fullName())
+    print(mike.age())
+}
+
+day2PM();
+
 // This also makes a function
 // var day1AM = function() {
 //

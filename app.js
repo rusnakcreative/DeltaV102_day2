@@ -67,6 +67,34 @@ function whatShouldIWear(temp) {
     }
 }
 
+function day2AM() {
+    var count = 100;
+    while(count >= 0) {
+        print(count);
+        count -= 1;
+    };
+}
+
+//day2AM();
+
+function addsum() {
+    var sum = 0;
+    var count = 0;
+    while (true) {
+        var input = parseInt(prompt('Enter a number. Type 0 to end. '));
+            if(input === 0) {
+                break;
+            } else {
+                sum += input;
+                count++;
+            }
+    }
+    console.log('The average of your numbers is ' +  sum / count)
+}
+
+addsum();
+
+
 // This also makes a function
 // var day1AM = function() {
 //
